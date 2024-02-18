@@ -158,7 +158,7 @@ predicted_data$PredictedProb <- plogis(predict(mod, newdata = predicted_data, ty
 
 #print result 
 predicted_data
-
+library(ggplot2)
 # Plotting predicted probabilities
 png("mod_predprobs.png", width = 400, height = 200)
 ggplot(predicted_data, aes(x = sanctions, y = PredictedProb, color = countries)) +
@@ -243,3 +243,10 @@ exp(mod2$coefficients)
 exp(-0.32510)
 exp(-0.182)
 stargazer(mod_interaction)
+
+library(stargazer)
+#also probabilities to include in table
+plogis(mod$coefficients)
+stargazer(plogis(mod$coefficients))
+plogis(-0.32510)
+exp(-0.32510)
