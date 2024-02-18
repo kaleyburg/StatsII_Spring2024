@@ -250,3 +250,5 @@ plogis(mod$coefficients)
 stargazer(plogis(mod$coefficients))
 plogis(-0.32510)
 exp(-0.32510)
+
+
