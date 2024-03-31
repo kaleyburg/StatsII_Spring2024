@@ -1,0 +1,381 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{ulem}
+\usepackage{mdframed} % for creating framed boxes
+\usepackage{adjustbox} % for resizing tables
+\usepackage{rotating}
+\usepackage{booktabs}
+\usepackage{graphicx} % for including graphics
+\usepackage{caption} % for customizing captions
+\usepackage{subcaption} % for subfigures and subcaptions
+\usepackage{mdframed} % for framed boxes
+\usepackage{adjustbox} % for adjusting the size of the included graphics
+
+
+\usetheme{Madrid}
+\usecolortheme{spruce}
+
+\setbeamercolor{block title}{use=structure, bg=green!50!black, fg=white}
+
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title[Replication]{Replication} %optional
+%\subtitle{A short story}
+\author{Kaley Burg} % (optional)
+\institute{Applied Statistics II} % (optional)
+\date{\today} % (optional)
+
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{Background of the Study: Research Question}
+   \begin{itemize}
+   	\item \textbf{Main question:} how do exclusionary attitudes among the Jewish majority predict discriminatory behaviour towards Palestinian citizens in Israel (PCI)
+   	\item Do exclusionary preferences stop individuals from cooperating with one another?
+   	\item Does the lack of cooperation therefore prevent societies from providing public goods?
+   	\item Authors also aim to understand how exclusionary attitudes are distinct from from behaviors.
+   \end{itemize}
+\end{frame}
+
+\begin{frame}{Background of the Study: Data}
+	\begin{itemize}
+		\item \textbf{Data:}
+		\item Uses lab-in-the-field data to study cooperation and exclusionary attitudes of Jewish people towards Palestinian Citizens of Israel (PCI)
+		\item Measure cooperation (behaviours) with an economic decision making game
+		\item Measure exclusionary attitudes with a social distance scale which asks participants to choose the degree of proximity that they would accept an outgroup member. Responses range from family relative to no relationship.
+
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Background of the Study: Variables}
+\begin{itemize}
+	\item \textbf{Variables:}
+	\item arab\_accept, arab\_accept\_character, arab\_reject\_binary - all variables corresponding to the level of exclusionary attitudes towards PCI, either in categorical form, continuous numeric, or binary. arab\_accept levels are: relative - 1, friend - 2, neighbor - 3, coworker - 4, citizen - 5, visitor - 6, and none - 7
+	\item age - continuous age variable
+	\item foreign\_born - binary variable, 1 corresponding to foreign born 
+	\item sex - binary variable, 1 corresponding to male
+	\item left\_right - ordinal variable, 1 meaning far left to 7 meaning far right             
+	\item religiosity - categorical data with levels anti, orthodox, secular, traditional, ultra-orthodox (treated as ordinal in the manuscript but treated as categorical dummies in all analysis)
+	\item education - ordinal variable with levels graduate, high school, primary, and undergraduate
+	\item income - ordinal with levels average, high, low, very high, very low 
+	\item ethnicity 
+	\item arab\_interactions - level of interaction with arabs with levels daily, monthly, never, week, and yearly
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Background of the Study: Hypotheses}
+	\begin{itemize}
+		\item Levels of exclusionary attitudes are high among the Jewish majority towards PCI
+		\item These levels of exclusion are highest for lower-status Jews (low SES, uneducated, and the ultra-Orthodox population)
+		\item Exclusionary attitudes are symbolic, meaning they are stable and affect other attitudes.
+		\item Cooperation is informed/predicted by exclusionary attitiudes preferences for exclusion. In other words, those with greater exclusionary attitudes towards PCI are also less likely to cooperate with PCI.
+		\item The attitudes-behaviour connection is not moderated by other factors such as perceptions of Arabs’ trustworthiness.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Their Models}
+	\begin{figure}[htbp]
+		\begin{mdframed}[
+			skipabove=0.5\baselineskip, % adjust the space above the framed box
+			skipbelow=0.5\baselineskip, % adjust the space below the framed box
+			linewidth=1pt, % set the width of the frame lines
+			innerleftmargin=10pt, % adjust the left margin of the frame
+			innerrightmargin=10pt, % adjust the right margin of the frame
+			innertopmargin=10pt, % adjust the top margin of the frame
+			innerbottommargin=10pt, % adjust the bottom margin of the frame
+			]
+			\centering
+			\caption{Social Distance by Group}
+			\label{fig:Social Distance by Group}
+			\begin{subfigure}[b]{0.4\textwidth} % adjust the width as needed
+				\includegraphics[width=\textwidth]{distance_uo_arabs}
+				\caption{Distance UO Arabs}
+				\label{fig:distance_uo_arabs}
+			\end{subfigure}
+			\hfill
+			\begin{subfigure}[b]{0.4\textwidth} % adjust the width as needed
+				\includegraphics[width=\textwidth]{distance_secular_arabs}
+				\caption{Distance Secular Arabs}
+				\label{fig:distance_secular_arabs}
+			\end{subfigure}
+		\end{mdframed}
+	\end{figure}
+	
+	
+\end{frame}
+
+
+\begin{frame}{Their Models}
+	\begin{figure}[htbp]
+		\begin{mdframed}[
+			skipabove=0.5\baselineskip, % adjust the space above the framed box
+			skipbelow=0.5\baselineskip, % adjust the space below the framed box
+			linewidth=1pt, % set the width of the frame lines
+			innerleftmargin=10pt, % adjust the left margin of the frame
+			innerrightmargin=10pt, % adjust the right margin of the frame
+			innertopmargin=10pt, % adjust the top margin of the frame
+			innerbottommargin=10pt, % adjust the bottom margin of the frame
+			]
+			\centering
+			\caption{Religiosity, ideology, education, and social distance}
+			\label{fig:Religiosity_ideology_education_social_distance}
+			\begin{subfigure}[b]{0.3\textwidth} % adjust the width as needed
+				\centering
+				\includegraphics[width=0.8\textwidth]{predict_religiosity} % adjust the scale of the image
+				\caption{Religiosity}
+				\label{fig:predict_religiosity}
+			\end{subfigure}\hfill
+			\begin{subfigure}[b]{0.3\textwidth} % adjust the width as needed
+				\centering
+				\includegraphics[width=0.8\textwidth]{predict_left_right} % adjust the scale of the image
+				\caption{Political Ideology}
+				\label{fig:predict_leftright}
+			\end{subfigure}\hfill
+			\begin{subfigure}[b]{0.3\textwidth} % adjust the width as needed
+				\centering
+				\includegraphics[width=0.8\textwidth]{predict_education} % adjust the scale of the image
+				\caption{Education}
+				\label{fig:predict_education}
+			\end{subfigure}
+		\end{mdframed}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Their Models}
+	\begin{minipage}[t]{0.48\textwidth} % Adjust the width as needed
+		\vspace{0pt} % Adjust the vertical alignment
+		\begin{center}
+			\adjustbox{max width=\linewidth,max height=0.9\textheight,keepaspectratio}{\includegraphics{table1.pdf}}
+		\end{center}
+	\end{minipage}\hfill
+	\begin{minipage}[t]{0.48\textwidth} % Adjust the width as needed
+		\vspace{0pt} % Adjust the vertical alignment
+		\begin{center}
+			\adjustbox{max width=\linewidth,max height=0.9\textheight,keepaspectratio}{\includegraphics{table2.pdf}}
+		\end{center}
+	\end{minipage}
+\end{frame}
+
+
+
+
+\begin{frame}{My Replication: Overview}
+	\begin{itemize}
+	\item For my twist, I:
+		\begin{itemize}
+			\item Checked the model-fit of the ordered multinomial regression using a parallel line assumption test and analysing the cutpoints of the model
+			\item Ran an unordered model on the complete outcome data as well as the binary exclusionary attitudes model
+			\item Checked the fit of the unordered models
+			\item Determined which model was most useful and if the authors were justified in using a linear model for categorical data
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{My Replication: Ordered Multinomial Tests}
+	\begin{itemize}
+		\item What did the authors say?
+		\item "Ordered logit regression provides substantively similar results." (p. 749).
+		\item I ran their code included in the replication files along with my own code to ensure that the model was run properly
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{My Replication: Ordered Multinomial Tests}
+	   \begin{center}
+	   	\vspace{-1cm}
+		\adjustbox{max width=\textwidth,max height=\textheight,keepaspectratio}{\includegraphics{table3.pdf}}
+		\end{center}
+\end{frame}
+
+\begin{frame}{My Replication: Ordered Multinomial Tests}
+	\begin{itemize}
+		\item Then I plotted the intercepts:
+	\end{itemize}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.7\textwidth]{intercepts.png} % Adjust the width as needed
+ % Add a caption if needed
+		\label{fig:intercepts}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}{My Replication: Ordered Multinomial Tests}
+	\begin{itemize}
+		\item Long (1997) states that "in general, the results of the LRM only correspond to those of the ORM \textit{if} the thresholds are all about the same distance apart. When this is not the case, the LRM can give very misleading results.
+		\item This also serves as a first indication that the linear regression model might be giving skewed results.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{My Replication: Ordered Multinomial Tests}
+\begin{itemize}
+	\item \textbf{Multinomial Model Results:} 
+	\item significant at the $p<0.001$ level: sex/gender, and political ideology (left/right). 
+	\item significant at the $p<0.05$ level: ultra-Orthodox religious identity (compared to orthodox as the reference category)
+	\item significant at the $p<0.01$ level: secular religious identity (compared to orthodox as the reference category), and primary education level (compared to grad).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{My Replication: Ordered Multinomial Tests}
+	\begin{itemize}
+		\item \textbf{OLS Results:} 
+		\item significant at the $p<0.001$ level: sex/gender, political ideology (left/right), and ultra-Orthodox (compared to Orthodox). 
+		\item significant at the $p<0.05$ level: primary educational level (compared to grad as reference category)
+		\item significant at the $p<0.01$ level: foreign born (compared to not foreign born as the reference category), secular religious identity (compared to orthodox as reference category), undergraduate educational level (compared to grad as reference category), and high income (compared to average as the reference category) and primary education level (compared to grad).
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{My Replication: Ordered Multinomial Tests}
+	\begin{itemize}
+		\item \textbf{Conclusions}
+		\item The linear model contains significance for the variables foreign born, undergraduate, and high income that the multinomial model does not show as significant
+		\item I am going to assume that they consider this meets the standard for 'substantively similar results' to therefore use OLS as the primary model.  
+		\item Note: the significance levels of the multinomial model were confirmed with CIs for log-odds and odds ratios
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{My Replication: Ordered Multinomial Tests}
+	\begin{itemize}
+		\item Next we can look at the results of the parallel line assumption test
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Parallel Line Assumption}
+	\vspace{-1.4cm}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.7\textwidth]{parallel_line.pdf} % Adjust the width as needed
+		% Add a caption if needed
+		\label{fig:intercepts}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Parallel Line Assumption}
+	\begin{itemize}
+		\item We can see that the parallel line assumption \textbf{does not appear to hold}, as we have sign changes as we move along the acceptance categories
+		\item In this case, we can run an unordered model to see if this is a better fit
+	\end{itemize}
+\end{frame}
+
+
+
+
+		 
+
+\begin{frame}{My Replication: Unordered Multinomial - Log Odds}
+	\vspace{-1.4cm}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.7\textwidth]{unord_logodds.pdf} % Adjust the width as needed
+		% Add a caption if needed
+		\label{fig:intercepts}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{My Replication: Unordered Multinomial- Odds Ratio}
+	\vspace{-1.4cm}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.7\textwidth]{table8.png} % Adjust the width as needed
+		% Add a caption if needed
+		\label{fig:intercepts}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{My Replication: Unordered Multinomial - Prediction Table}
+	\vspace{-1.4cm}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.7\textwidth]{table9.png} % Adjust the width as needed
+		% Add a caption if needed
+		\label{fig:intercepts}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{My Replication: Unordered Multinomial - Conclusions}
+\begin{itemize}
+	\item The model tends to overpredict the "none" outcome and underpredict the visitor outcome.
+	\item The results of the unordered multinomial regression are very messy and hard to interpret due to the number of outcomes possible and the amount of predictors used in the model. 
+	\item Instead - run model with outcome as a binary variable, which the authors do in their second model of cooperation.
+	\item The outcome variable is instead - everyone who said they would accept a PCI as a coworker or closer as low exclusionary preference and all other options as high exclusionary preference
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{My Replication: Binary Logistic Regression - Log Odds}
+	\vspace{-1.4cm}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.7\textwidth]{multinom_bin.pdf} % Adjust the width as needed
+		% Add a caption if needed
+		\label{fig:intercepts}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{My Replication: Binary Logistic Regression - Odds Ratios}
+	\vspace{-1.4cm}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.7\textwidth]{table11.png} % Adjust the width as needed
+		% Add a caption if needed
+		\label{fig:intercepts}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{My Replication: Binary Logistic Regression - Predictions}
+	\vspace{-1.4cm}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.7\textwidth]{table12.png} % Adjust the width as needed
+		% Add a caption if needed
+		\label{fig:intercepts}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{My Replication: Binary Logistic Regression - Conclusions}
+	\begin{itemize}
+		\item These results make significantly more sense and are easier to interpret. 
+		\item This prediction table implies that the model correctly predicts exclusionary attitudes relatively well (286/300) but not non-exclusionary attitudes (27/75).
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{My Replication: Conclusions}
+	
+	\begin{itemize}
+		\item The authors found that "In this article, we have shown that social distance, a measure of exclusionary preferences, is strongly predictive of cooperation in a public goods game" (p. 753).
+		\item The authors also state "Political ideology, education, and religiosity all appear to be strongly related to social distance, with more right-wing, more religious, and less-educated subjects expressing more exclusionary preferences" (p. 749).
+		\item My results indicate that the conclusion that the 'results are substantively similar' is partially justified. Based on the conclusions drawn by the authors about which factors are significant in their overall analysis, the results are justified. 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{My Replication: Conclusions}
+	\begin{itemize}
+		\item Overall, it seems as though all of the models I tested seem to be relatively good at predicting a lack of acceptance towards PCI. 
+		\item Each model has its own setback: the OLS model such that the outcome variable is not continuous in nature and the cut points of the ordinal model imply that this model might be skewed; the ordinal model does not pass the parallel line assumption test; and the unordered model produces strangely high odds ratios and has quite poor predictive power. 
+		\item Overall: the scale from which the major conclusions were drawn from might be skewed, leading to abnormal results. This is supported by Weinfurt and Moghaddam (2001), who state the difficulties of using the social closeness scale as an ordinal measure in various cultural contexts
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}{References}
+	\begin{list}{}{\setlength{\leftmargin}{2.5em}\setlength{\itemindent}{-2.5em}}
+		\item[] Enos, R. D., \& Gidron, N. (2018). Exclusion and Cooperation in Diverse Societies: Experimental Evidence from Israel. \textit{American Political Science Review}, \textit{112}(4), 742–757. https://doi.org/10.1017/S0003055418000266
+		\item[] Weinfurt, K. P., \& Moghaddam, F. M. (2001). Culture and Social Distance: A Case Study of Methodological Cautions. \textit{The Journal of Social Psychology}, \textit{141}(1), 101–110. https://doi.org/10.1080/00224540109600526
+	\end{list}
+	
+\end{frame}
+
+\end{document}
